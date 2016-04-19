@@ -8,12 +8,13 @@
  ╚════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═══╝    ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝
  </pre>
 
- Development
- ===========
 
- 1. Install NodeJS.
- 2. Clone this repo `git clone https://github.com/steelsojka/jackson-kings-public.git`
- 3. Run `npm install` in the root of this project.
- 4. Run `npm start`
- 5. Visit `http://localhost:8080` in a browser.
- 6. $$$ profit.
+Development
+-----------
+
+1. Install NodeJS.
+2. Clone this repo `git clone https://github.com/steelsojka/jackson-kings-public.git`
+3. Run `npm install` in the root of this project.
+4. Run `npm start`
+5. Visit `http://localhost:8080` in a browser.
+6. $$$ profit.
