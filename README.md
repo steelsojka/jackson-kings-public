@@ -1,35 +1,19 @@
-<!DOCTYPE html>
-<!--
+<pre>
+
      ██╗ █████╗  ██████╗██╗  ██╗███████╗ ██████╗ ███╗   ██╗    ██╗  ██╗██╗███╗   ██╗ ██████╗ ███████╗
      ██║██╔══██╗██╔════╝██║ ██╔╝██╔════╝██╔═══██╗████╗  ██║    ██║ ██╔╝██║████╗  ██║██╔════╝ ██╔════╝
      ██║███████║██║     █████╔╝ ███████╗██║   ██║██╔██╗ ██║    █████╔╝ ██║██╔██╗ ██║██║  ███╗███████╗
 ██   ██║██╔══██║██║     ██╔═██╗ ╚════██║██║   ██║██║╚██╗██║    ██╔═██╗ ██║██║╚██╗██║██║   ██║╚════██║
 ╚█████╔╝██║  ██║╚██████╗██║  ██╗███████║╚██████╔╝██║ ╚████║    ██║  ██╗██║██║ ╚████║╚██████╔╝███████║
  ╚════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═══╝    ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝
--->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <!-- Metadata for mobile devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+ </pre>
 
-    <!-- Load BootstrapCSS scaffolding framework -> http://getbootstrap.com/ -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <!-- Load our bootstrap theme. This can be modified -->
-    <link rel="stylesheet" href="css/bootstrap-theme.css" />
-    <!-- Load Font Icon library "font-awesome" -> https://fortawesome.github.io/Font-Awesome/ -->
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <!-- Load our main CSS file -->
-    <link rel="stylesheet" href="css/main.css" />
+ Development
+ ===========
 
-    <title>Jackson Kings Official</title>
-  </head>
-  <body>
-    <header></header>
-    <section class="container"></section>
-    <footer></footer>
-
-    <!-- Load this at the bottom of the body so it's non blocking -->
-    <script src="js/index.js" type="text/javascript"></script>
-  </body>
-</html>
+ 1. Install NodeJS.
+ 2. Clone this repo `git clone https://github.com/steelsojka/jackson-kings-public.git`
+ 3. Run `npm install` in the root of this project.
+ 4. Run `npm start`
+ 5. Visit `http://localhost:8080` in a browser.
+ 6. $$$ profit.
