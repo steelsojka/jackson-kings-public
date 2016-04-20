@@ -6,34 +6,56 @@ body {
   color: #F1F1F1;
 }
 
-.main-content {
-  height: 3000px; /* Temporary to test page length */
-}
-
 footer {
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-footer .footer-social-media-icons {
+footer .social-media-icons {
   font-size: 30px;
-  float: right;
+  text-align: right;
 }
 
+footer .footer-copyright {
+  text-align: left;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+header .social-media-icons {
+  font-size: 30px;
+  text-align: right;
+}
+
+header .header-logo {
+  padding: 10px;
+}
+
+header .header-logo img {
+  width: 100%;
+}
+
+header nav {
+  padding: 20px 0;
+}
+
+
 /* Styles for social media icons */
-footer .footer-social-media-icons a {
+.social-media-icons a {
   color: #F1F1F1;
   padding-left: 10px;
 }
 
 /* Styles when social media icons are hovered over */
-footer .footer-social-media-icons a:hover {
+.social-media-icons a:hover {
   color: rgb(210, 210, 210);
 }
 
 /* Don't underline these links when hover or visited */
-footer .footer-social-media-icons a:hover,
-footer .footer-social-media-icons a:visited {
+.social-media-icons a:hover,
+.social-media-icons a:visited {
   text-decoration: none;
 }
 
@@ -42,13 +64,32 @@ footer .footer-social-media-icons a:visited {
  */
 @media(max-width: 768px) {
   /* Center the social icons */
-  footer .footer-social-media-icons {
+  footer .social-media-icons {
     text-align: center;
-    float: none;
   }
 
   /* Make the width between icons slightly larger for fingers */
-  footer .footer-social-media-icons a {
+  footer .social-media-icons a {
     padding: 10px;
+  }
+
+  footer .footer-copyright {
+    text-align: center;
+  }
+
+  header .social-media-icons {
+    text-align: center;
+  }
+
+  header .social-media-icons a {
+    padding: 10px;
+  }
+
+  header .header-logo {
+    text-align: center;
+  }
+
+  header nav {
+    padding: 10px 0;
   }
 }

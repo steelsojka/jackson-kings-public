@@ -27,13 +27,27 @@
   <body>
     <header>
       <div class="container">
-        <!-- 
-        A big banner with the band name would go here.
-        We would remove the 'jumbotron' class from this once a banner (logo) is created.
-        -->
-        <div class="jumbotron">
-          <h1> Big Banner Here</h1>
-        </div>
+        <div class="row">
+          <div class="header-logo col-md-4 col-sm-6">
+            <img src="assets/images/logo.svg" />
+          </div>
+          <nav class="col-md-8 col-sm-6">
+            <div class="social-media-icons">
+              <a href="https://twitter.com/thejacksonkings" target="_blank">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="https://facebook.com/jacksonkings" target="_blank">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.instagram.com/jacksonkings/" target="_blank">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="https://soundcloud.com/jacksonkings" target="_blank">
+                <i class="fa fa-soundcloud" aria-hidden="true"></i>
+              </a>
+            </div>
+          </nav>
+      </div>
       </div>
     </header>
     <section class="main-content">
@@ -69,29 +83,39 @@
         </code></pre>
       </div>
     </section>
+    <!--
+    The footer has some fancy grid layout. When not on a mobile device the footer
+    is divded into 2 side by side columns. When smaller the columns stack to go vertical.
+    -->
     <footer>
       <div class="container">
+        <div class="row">
+          <!-- 
+          Social media icons and links
+          ============================
 
-        <!-- 
-        Social media icons and links
-        ============================
+          The target attribute specifies to open in a new window when clicked.
+          The icons are part ofa custom font and are displayed by that 'fa' and 'fa-icon' classes.
+          -->
+          <div class="social-media-icons col-md-8 col-sm-6 col-md-push-4 col-sm-push-6">
+            <a href="https://twitter.com/thejacksonkings" target="_blank">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="https://facebook.com/jacksonkings" target="_blank">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/jacksonkings/" target="_blank">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://soundcloud.com/jacksonkings" target="_blank">
+              <i class="fa fa-soundcloud" aria-hidden="true"></i>
+            </a>
+          </div>
 
-        The target attribute specifies to open in a new window when clicked.
-        The icons are part ofa custom font and are displayed by that 'fa' and 'fa-icon' classes.
-        -->
-        <div class="footer-social-media-icons">
-          <a href="https://twitter.com/thejacksonkings" target="_blank">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-          </a>
-          <a href="https://facebook.com/jacksonkings" target="_blank">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.instagram.com/jacksonkings/" target="_blank">
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-          </a>
-          <a href="https://soundcloud.com/jacksonkings" target="_blank">
-            <i class="fa fa-soundcloud" aria-hidden="true"></i>
-          </a>
+          <!-- Copyright notice -->
+          <div class="footer-copyright col-md-4 col-sm-6 col-md-pull-8 col-sm-pull-6">
+            &copy <span id="footer-copyright-year">2016</span> Jackson Kings. All rights reserved.
+          </div>
         </div>
       </div>
     </footer>
