@@ -1,0 +1,54 @@
+body {
+  min-height: 100vh;
+  background-image: url(../assets/images/body-bg-texture.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  color: #F1F1F1;
+}
+
+.main-content {
+  height: 3000px; /* Temporary to test page length */
+}
+
+footer {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+footer .footer-social-media-icons {
+  font-size: 30px;
+  float: right;
+}
+
+/* Styles for social media icons */
+footer .footer-social-media-icons a {
+  color: #F1F1F1;
+  padding-left: 10px;
+}
+
+/* Styles when social media icons are hovered over */
+footer .footer-social-media-icons a:hover {
+  color: rgb(210, 210, 210);
+}
+
+/* Don't underline these links when hover or visited */
+footer .footer-social-media-icons a:hover,
+footer .footer-social-media-icons a:visited {
+  text-decoration: none;
+}
+
+/* Styles specific for phones.
+ * Kicks in when the browsers window is less than 768px.
+ */
+@media(max-width: 768px) {
+  /* Center the social icons */
+  footer .footer-social-media-icons {
+    text-align: center;
+    float: none;
+  }
+
+  /* Make the width between icons slightly larger for fingers */
+  footer .footer-social-media-icons a {
+    padding: 10px;
+  }
+}
