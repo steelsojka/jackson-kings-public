@@ -41,16 +41,24 @@ header nav {
   padding: 20px 0;
 }
 
+header .header-social-media-links {
+  font-size: 20px;
+  text-align: center;
+  color: #F1F1F1;
+}
 
 /* Styles for social media icons */
 .social-media-icons a {
-  color: #F1F1F1;
   padding-left: 10px;
 }
 
 /* Styles when social media icons are hovered over */
-.social-media-icons a:hover {
+a:hover {
   color: rgb(210, 210, 210);
+}
+
+a {
+  color: #F1F1F1;
 }
 
 /* Don't underline these links when hover or visited */
@@ -91,5 +99,9 @@ header nav {
 
   header nav {
     padding: 10px 0;
+  }
+
+  header .header-social-media-links > div {
+    padding: 5px 0;
   }
 }
