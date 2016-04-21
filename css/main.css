@@ -23,6 +23,7 @@ footer .social-media-icons {
 
 footer .footer-copyright {
   text-align: left;
+  font-size: 13px;
 }
 
 header {
@@ -36,10 +37,11 @@ header .social-media-icons {
 
 header .header-logo {
   padding: 10px;
+  text-align: center;
 }
 
 header .header-logo img {
-  width: 100%;
+  width: 90%;
 }
 
 header nav {
@@ -89,6 +91,7 @@ a {
 
   footer .footer-copyright {
     text-align: center;
+    font-size: 10px;
   }
 
   header .social-media-icons {
@@ -99,8 +102,8 @@ a {
     padding: 10px;
   }
 
-  header .header-logo {
-    text-align: center;
+  header .header-logo img {
+    width: 100%;
   }
 
   header nav {
