@@ -12,8 +12,12 @@ body {
 }
 
 footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 footer .social-media-icons {
@@ -27,7 +31,7 @@ footer .footer-copyright {
 }
 
 header {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 header .social-media-icons {
@@ -75,10 +79,22 @@ a {
   text-decoration: none;
 }
 
+.main-content {
+  padding-bottom: 70px;
+}
+
+.content-player {
+  padding: 10px 0;
+}
+
 /* Styles specific for phones.
  * Kicks in when the browsers window is less than 768px.
  */
 @media(max-width: 768px) {
+  footer {
+    position: relative;
+  }
+
   /* Center the social icons */
   footer .social-media-icons {
     text-align: center;
@@ -112,5 +128,9 @@ a {
 
   header .header-social-media-links > div {
     padding: 5px 0;
+  }
+
+  .main-content {
+    padding-bottom: 0;
   }
 }
