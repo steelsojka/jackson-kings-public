@@ -113,7 +113,7 @@
     <script type="text/x-template" id="media-gallery-template">
       <div class="jk-media-gallery">
         <div v-for="item of mediaItems">
-          <img class="img-responsive pull-left" :src="item.images.low_resolution.url" />
+          <img :src="item.images.low_resolution.url" />
         </div>
       </div>
     </script>

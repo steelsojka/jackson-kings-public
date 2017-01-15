@@ -1,36 +1,6 @@
 (function(JK) {
-  JK.InstagramService = {
-    // This really shouldn't be stored here, but it's sandboxed and anybody can't really do much with it.
-    accessToken: '202391883.a7b08ff.aa0c792905fd48edaa64f307f0ceef7b',
-    apiUrl: 'https://api.instagram.com/v1',
-    makeRequest: function(path) {
-      return JK.LoadJSONP(this.apiUrl + path + '?access_token=' + this.accessToken)
-        .then(function(data) {
-          return data.data; 
-        });
-    },
-    getMedia: function() {
-      return this.makeRequest('/users/self/media/recent');
-    }
-  };
-  
   // Run when the document is ready for modification.
   document.addEventListener('DOMContentLoaded', onDOMContentLoaded, false);
-
-  Vue.component('jk-media-gallery', {
-    template: '#media-gallery-template',
-    data: function() {
-      return {
-        mediaItems: []    
-      };
-    },
-    mounted: function() {
-      return JK.InstagramService.getMedia()
-        .then(function(items) { 
-          this.mediaItems = items; 
-        }.bind(this));
-    }
-  });
 
   // Main function executed on DOM loaded.
   function onDOMContentLoaded() {
@@ -44,10 +14,68 @@
     });
 
     new Vue({
-      el: '#app'
+      el: '#app',
+      components: {
+        JkMediaGallery: JK.MediaGalleryComponent
+      }
     });
   }
 }(this.JK));
+
+// Instagram Service
+(function(JK) {
+  JK.InstagramService = {
+    // This really shouldn't be stored here, but it's sandboxed and anybody can't really do much with it.
+    accessToken: '202391883.a7b08ff.aa0c792905fd48edaa64f307f0ceef7b',
+    apiUrl: 'https://api.instagram.com/v1',
+    makeRequest: function(path) {
+      return JK.LoadJSONP(this.apiUrl + path + '?access_token=' + this.accessToken)
+        .then(function(res) {
+          if (res.meta.code >= 200 || res.meta.code < 400) {
+            return res.data; 
+          }
+
+          return Promise.reject(res.meta);
+        });
+    },
+    getMedia: function() {
+      return this.makeRequest('/users/self/media/recent');
+    }
+  };
+})(this.JK);
+
+(function(JK) {
+  JK.RequestStatus = {
+    PENDING: 'PENDING',
+    SUCCESS: 'SUCCESS',
+    FAILED: 'FAILED'
+  };
+})(this.JK);
+
+// Media Component
+(function(JK) {
+  JK.MediaGalleryComponent = {
+    template: '#media-gallery-template',
+    data: function() {
+      return {
+        mediaItems: [],
+        requestStatus: JK.RequestStatus.PENDING
+      };
+    },
+    mounted: function() {
+      var self = this;
+      
+      return JK.InstagramService.getMedia()
+        .then(function(items) { 
+          self.mediaItems = items; 
+          self.requestStatus = JK.RequestStatus.SUCCESS;
+        })
+        .catch(function(meta) {
+          self.requestStatus = JK.RequestStatus.FAILED;
+        });
+    }
+  };
+})(this.JK);
 
 // Load data through JSONP... I know...
 (function(JK, global) {
