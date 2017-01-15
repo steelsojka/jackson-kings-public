@@ -1,0 +1,1 @@
+module.exports.MediaGalleryComponent = require('./MediaGallery.component');
