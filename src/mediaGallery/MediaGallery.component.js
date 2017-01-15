@@ -2,6 +2,8 @@ var RequestStatus = require('../common').RequestStatus;
 var InstagramService = require('../InstagramService');
 var template = require('./MediaGallery.html');
 
+require('./MediaGallery.css');
+
 module.exports = {
   template: template,
   data: function() {

@@ -1,6 +1,6 @@
 module.exports = {
   entry: {
-    app: './js/index.js',
+    app: './src/index.js',
     vendor: [
       'promise-polyfill'
     ]
@@ -13,6 +13,9 @@ module.exports = {
     loaders: [{
       test: /\.html$/,
       loader: 'html'
+    }, {
+      test: /\.css$/,
+      loader: 'style-loader!css-loader'
     }]
   },
   resolve: {

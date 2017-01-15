@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Jackson Kings Public Site",
   "scripts": {
-    "start": "http-server ./",
+    "start": "webpack-dev-server --inline",
     "prebuild": "del ./dist",
     "build": "webpack"
   },
@@ -17,10 +17,12 @@
     "url": "https://github.com/steelsojka/jackson-kings-public/issues"
   },
   "devDependencies": {
+    "css-loader": "^0.26.1",
     "del-cli": "^0.2.1",
     "html-loader": "^0.4.4",
-    "http-server": "^0.9.0",
-    "webpack": "^1.14.0"
+    "style-loader": "^0.13.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
     "promise-polyfill": "^6.0.2",
