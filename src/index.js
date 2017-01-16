@@ -1,6 +1,8 @@
 var MediaGalleryComponent = require('./mediaGallery').MediaGalleryComponent;
 var Vue = require('vue');
 
+require('./css/main.css');
+
 // Run when the document is ready for modification.
 document.addEventListener('DOMContentLoaded', onDOMContentLoaded, false);
 

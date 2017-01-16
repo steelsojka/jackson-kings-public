@@ -1,3 +1,7 @@
+@import "./bootstrap.min.css";
+@import "./bootstrap-theme.css";
+@import "./font-awesome.min.css";
+
 @font-face {
   font-family: "Code Bold";
   src: url("../fonts/CODE Bold.otf");
@@ -85,6 +89,10 @@ a {
 
 .content-player {
   padding: 10px 0;
+}
+
+.jk-media-player {
+  display: flex;
 }
 
 /* Styles specific for phones.

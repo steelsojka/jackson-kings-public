@@ -1,3 +1,6 @@
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HTMLWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   entry: {
     app: './src/index.js',
@@ -15,12 +18,18 @@ module.exports = {
       loader: 'html'
     }, {
       test: /\.css$/,
-      loader: 'style-loader!css-loader'
+      loader: ExtractTextPlugin.extract('style-loader', 'css-loader?url=false')
     }]
   },
   resolve: {
     alias: {
       'vue': 'vue/dist/vue'
     }
-  }
+  },
+  plugins: [
+    new ExtractTextPlugin('app.css'),
+    new HTMLWebpackPlugin({
+      template: './src/index.ejs'
+    })
+  ]
 };

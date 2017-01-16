@@ -45,7 +45,9 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var MediaGalleryComponent = __webpack_require__(1).MediaGalleryComponent;
-	var Vue = __webpack_require__(7);
+	var Vue = __webpack_require__(11);
+
+	__webpack_require__(12);
 
 	// Run when the document is ready for modification.
 	document.addEventListener('DOMContentLoaded', onDOMContentLoaded, false);
@@ -83,6 +85,8 @@
 	var RequestStatus = __webpack_require__(3).RequestStatus;
 	var InstagramService = __webpack_require__(4);
 	var template = __webpack_require__(6);
+
+	__webpack_require__(7);
 
 	module.exports = {
 	  template: template,
@@ -180,6 +184,15 @@
 
 /***/ },
 /* 7 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/*!
@@ -8699,6 +8712,12 @@
 	})));
 
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 12 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);

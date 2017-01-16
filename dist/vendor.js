@@ -40,22 +40,17 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(8);
+	module.exports = __webpack_require__(17);
 
 
 /***/ },
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */
+
+/***/ 17:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(setImmediate) {(function (root) {
@@ -292,10 +287,11 @@
 
 	})(this);
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9).setImmediate))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(18).setImmediate))
 
 /***/ },
-/* 9 */
+
+/***/ 18:
 /***/ function(module, exports, __webpack_require__) {
 
 	var apply = Function.prototype.apply;
@@ -348,13 +344,14 @@
 	};
 
 	// setimmediate attaches itself to the global object
-	__webpack_require__(10);
+	__webpack_require__(19);
 	exports.setImmediate = setImmediate;
 	exports.clearImmediate = clearImmediate;
 
 
 /***/ },
-/* 10 */
+
+/***/ 19:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -544,10 +541,11 @@
 	    attachTo.clearImmediate = clearImmediate;
 	}(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(11)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(20)))
 
 /***/ },
-/* 11 */
+
+/***/ 20:
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -733,4 +731,5 @@
 
 
 /***/ }
-/******/ ]);
+
+/******/ });
