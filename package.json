@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Jackson Kings Public Site",
   "scripts": {
-    "start": "webpack-dev-server --inline --config webpack.config.js --hot",
+    "start": "node scripts/serve.js",
     "prebuild": "del ./dist",
-    "build": "webpack"
+    "build": "node scripts/build.js --production",
+    "build:dev": "node scripts/build.js"
   },
   "repository": {
     "type": "git",
@@ -24,11 +25,13 @@
     "html-webpack-plugin": "^2.26.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.16.2"
+    "webpack-dev-server": "^1.16.2",
+    "yargs": "^6.6.0"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
+    "lodash": "^4.17.4",
     "promise-polyfill": "^6.0.2",
     "vue": "^2.1.8"
   }

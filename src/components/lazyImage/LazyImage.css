@@ -1,0 +1,9 @@
+.jk-lazy-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jk-lazy-image__loader {
+  font-size: 36px !important;
+}

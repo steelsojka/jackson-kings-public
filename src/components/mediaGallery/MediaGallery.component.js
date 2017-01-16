@@ -1,11 +1,15 @@
-var RequestStatus = require('../common').RequestStatus;
-var InstagramService = require('../utils').InstagramService;
+var RequestStatus = require('../../common').RequestStatus;
+var InstagramService = require('../../utils').InstagramService;
 var template = require('./MediaGallery.html');
+var LazyImageComponent = require('../lazyImage').LazyImageComponent;
 
 require('./MediaGallery.css');
 
 module.exports = {
   template: template,
+  components: {
+    JkLazyImage: LazyImageComponent  
+  },
   data: function() {
     return {
       mediaItems: [],

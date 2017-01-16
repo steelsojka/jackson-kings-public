@@ -1,4 +1,4 @@
-var MediaGalleryComponent = require('./mediaGallery').MediaGalleryComponent;
+var MediaGalleryComponent = require('./components').MediaGalleryComponent;
 var Vue = require('vue');
 
 require('./assets');

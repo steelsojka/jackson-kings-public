@@ -1,0 +1,4 @@
+<div class="jk-lazy-image" :style="{ height: height + 'px', width: width + 'px' }">
+  <div v-if="resolving" class="fa fa-spin fa-spinner jk-lazy-image__loader"></div>
+  <img v-if="resolved" :height="height" :src="src"/>
+</div>
