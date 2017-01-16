@@ -1,3 +1,13 @@
 .jk-media-gallery {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.jk-media-gallery__item {
+  padding: 5px;
+}
+
+.jk-media-gallery__item img{
+  width: 100%;
 }

@@ -1,15 +1,11 @@
-@import "./bootstrap.min.css";
-@import "./bootstrap-theme.css";
-@import "./font-awesome.min.css";
-
 @font-face {
   font-family: "Code Bold";
-  src: url("../fonts/CODE Bold.otf");
+  src: url("../fonts/Code-Bold.woff2"), url("../fonts/Code-Bold.otf");
 }
 
 body {
   min-height: 100vh;
-  background-image: url(../assets/images/body-bg-texture.jpg);
+  background-image: url(../assets/body-bg-texture.jpg);
   background-attachment: fixed;
   background-position: center;
   color: #F1F1F1;

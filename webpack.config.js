@@ -1,5 +1,6 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HTMLWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -18,7 +19,13 @@ module.exports = {
       loader: 'html'
     }, {
       test: /\.css$/,
-      loader: ExtractTextPlugin.extract('style-loader', 'css-loader?url=false')
+      loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+    }, {
+      test: /assets\/.*\.(jpg|svg)/,
+      loader: 'file?name=assets/[name].[ext]'
+    }, {
+      test: /fonts\/.*\.(otf|eot|ttf|svg|woff|woff2)/,
+      loader: 'file?name=fonts/[name].[ext]'
     }]
   },
   resolve: {
@@ -31,5 +38,10 @@ module.exports = {
     new HTMLWebpackPlugin({
       template: './src/index.ejs'
     })
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compress: {
+    //     warnings: false
+    //   }
+    // })
   ]
 };

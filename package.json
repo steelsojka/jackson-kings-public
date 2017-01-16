@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Jackson Kings Public Site",
   "scripts": {
-    "start": "webpack-dev-server --inline",
+    "start": "webpack-dev-server --inline --config webpack.config.js --hot",
     "prebuild": "del ./dist",
     "build": "webpack"
   },
@@ -27,6 +27,8 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
     "promise-polyfill": "^6.0.2",
     "vue": "^2.1.8"
   }

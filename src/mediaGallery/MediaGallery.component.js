@@ -1,5 +1,5 @@
 var RequestStatus = require('../common').RequestStatus;
-var InstagramService = require('../InstagramService');
+var InstagramService = require('../utils').InstagramService;
 var template = require('./MediaGallery.html');
 
 require('./MediaGallery.css');
