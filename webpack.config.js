@@ -29,6 +29,9 @@ module.exports = function(argv) {
       }, {
         test: /fonts\/.*\.(otf|eot|ttf|svg|woff|woff2)/,
         loader: 'file?name=fonts/[name].[ext]'
+      }, {
+        test: /CNAME/,
+        loader: 'file?name=[name]'
       }]
     },
     resolve: {
