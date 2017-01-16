@@ -1,7 +1,7 @@
 var debounce = require('lodash/debounce');
 
 var template = require('./LazyImage.html');
-var RequestStatus = require('../../common').RequestStatus;
+var ImageStatus = require('./common').ImageStatus;
 
 require('./LazyImage.css');
 
@@ -27,15 +27,28 @@ module.exports = {
   },
   data: function() {
     return {
-      status: RequestStatus.PENDING
+      status: ImageStatus.WAITING,
+      styles: {
+        height: this.height + 'px',
+        width: this.width + 'px'
+      }
     };
   },
   computed: {
     resolved: function() {
-      return this.status === RequestStatus.SUCCESS;
+      return this.status === ImageStatus.LOADED;
     },
-    resolving: function() {
-      return this.status === RequestStatus.PENDING;
+    waiting: function() {
+      return this.status === ImageStatus.WAITING;
+    },
+    pending: function() {
+      return this.status === ImageStatus.PENDING;
+    }
+  },
+  methods: {
+    onLoaded: function() {
+      this.status = ImageStatus.LOADED;
+      this.styles = {};
     }
   },
   mounted: function() {
@@ -45,7 +58,7 @@ module.exports = {
       var top = (dimensions.top + window.pageYOffset) - this.threshold;
       
       if (top <= windowBottom) {
-        this.status = RequestStatus.SUCCESS;
+        this.status = ImageStatus.PENDING;
         window.removeEventListener('scroll', handler, false);
       }
     }.bind(this), 100);

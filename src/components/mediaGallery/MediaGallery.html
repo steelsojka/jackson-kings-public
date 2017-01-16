@@ -1,9 +1,14 @@
 <div class="jk-media-gallery">
-  <div class="jk-media-gallery__item" v-for="item of mediaItems">
+  <div class="jk-media-gallery__item" 
+    v-for="item of mediaItems"
+    :style="{ width: item.images.low_resolution.width + 'px' }">
     <jk-lazy-image 
       :height="item.images.low_resolution.height" 
       :width="item.images.low_resolution.width" 
       :src="item.images.low_resolution.url">
     </jk-lazy-image>
+    <div>
+      <span v-if="item.caption">{{ item.caption.text }}</span>
+    </div>
   </div>
 </div>

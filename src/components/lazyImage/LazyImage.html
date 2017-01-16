@@ -1,4 +1,6 @@
-<div class="jk-lazy-image" :style="{ height: height + 'px', width: width + 'px' }">
-  <div v-if="resolving" class="fa fa-spin fa-spinner jk-lazy-image__loader"></div>
-  <img v-if="resolved" :height="height" :src="src"/>
+<div class="jk-lazy-image" :style="styles">
+  <div class="jk-lazy-image__loader" v-if="waiting || pending" :style="styles">
+    <div class="fa fa-spin fa-spinner"></div>
+  </div>
+  <img v-if="pending || resolved" :src="src" @load="onLoaded"/>
 </div>

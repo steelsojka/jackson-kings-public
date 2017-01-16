@@ -1,13 +1,16 @@
 .jk-media-gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .jk-media-gallery__item {
   padding: 5px;
+  background-color: rgba(0, 0, 0, 0.75);
+  margin-bottom: 5px;
 }
 
-.jk-media-gallery__item img{
+.jk-media-gallery__item img {
   width: 100%;
+  height: 100%;
 }
