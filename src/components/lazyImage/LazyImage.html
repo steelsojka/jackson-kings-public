@@ -2,5 +2,22 @@
   <div class="jk-lazy-image__loader" v-if="waiting || pending" :style="styles">
     <div class="fa fa-spin fa-spinner"></div>
   </div>
-  <img v-if="pending || resolved" :src="src" @load="onLoaded"/>
+  <img v-if="type === 'image' && (pending || resolved)" :src="src" @load="onLoaded"/>
+  <div class="relative" v-if="type === 'video' && resolved">
+    <img 
+      class="jk-lazy-image__poster" 
+      v-if="!confirmed" :src="poster" 
+      title="Click for video." 
+      @click.prevent="onClick" />
+    <video 
+      class="jk-lazy-image__video"
+      v-if="confirmed"
+      :height="height"
+      :width="width"
+      :src="src"
+      @load="onLoaded"
+      autoplay
+      controls>
+    </video>
+  </div>
 </div>

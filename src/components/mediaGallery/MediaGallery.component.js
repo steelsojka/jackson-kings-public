@@ -16,6 +16,16 @@ module.exports = {
       requestStatus: RequestStatus.PENDING
     };
   },
+  methods: {
+    getMediaURL: function(item) {
+      switch (item.type) {
+        case 'video':
+          return item.videos.low_resolution.url;
+        default:
+          return item.images.low_resolution.url;
+      }
+    }  
+  },
   mounted: function() {
     var self = this;
     

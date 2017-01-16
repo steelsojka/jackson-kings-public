@@ -5,7 +5,9 @@
     <jk-lazy-image 
       :height="item.images.low_resolution.height" 
       :width="item.images.low_resolution.width" 
-      :src="item.images.low_resolution.url">
+      :src="getMediaURL(item)"
+      :poster="item.images.low_resolution.url"
+      :type="item.type">
     </jk-lazy-image>
     <div>
       <span v-if="item.caption">{{ item.caption.text }}</span>

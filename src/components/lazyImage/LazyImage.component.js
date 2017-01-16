@@ -23,11 +23,19 @@ module.exports = {
     threshold: {
       default: 100,
       type: Number
+    },
+    type: {
+      type: String,
+      default: 'image'
+    },
+    poster: {
+      type: String
     }
   },
   data: function() {
     return {
       status: ImageStatus.WAITING,
+      confirmed: false,
       styles: {
         height: this.height + 'px',
         width: this.width + 'px'
@@ -49,6 +57,9 @@ module.exports = {
     onLoaded: function() {
       this.status = ImageStatus.LOADED;
       this.styles = {};
+    },
+    onClick: function() {
+      this.confirmed = true;
     }
   },
   mounted: function() {
@@ -58,7 +69,16 @@ module.exports = {
       var top = (dimensions.top + window.pageYOffset) - this.threshold;
       
       if (top <= windowBottom) {
-        this.status = ImageStatus.PENDING;
+        switch (this.type) {
+          case 'image':
+            this.status = ImageStatus.PENDING;
+            this.confirmed = true;
+            break;
+          case 'video':
+            this.status = ImageStatus.LOADED;
+            break;
+        }
+        
         window.removeEventListener('scroll', handler, false);
       }
     }.bind(this), 100);

@@ -12,3 +12,12 @@
   align-items: center;
   justify-content: center;
 }
+
+.jk-lazy-image__poster {
+  cursor: pointer;
+}
+
+.jk-lazy-image__poster,
+.jk-lazy-image__video {
+  padding-right: 10px;
+}

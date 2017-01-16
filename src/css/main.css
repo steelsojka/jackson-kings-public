@@ -3,6 +3,10 @@
   src: url("../fonts/Code-Bold.woff2"), url("../fonts/Code-Bold.otf");
 }
 
+.relative {
+  position: relative;
+}
+
 body {
   min-height: 100vh;
   background-image: url(../assets/body-bg-texture.jpg);
