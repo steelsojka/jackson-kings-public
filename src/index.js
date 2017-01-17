@@ -1,4 +1,5 @@
 var MediaGalleryComponent = require('./components').MediaGalleryComponent;
+var SoundCloudPlayerComponent = require('./components').SoundCloudPlayerComponent;
 var Vue = require('vue');
 
 require('./assets');
@@ -22,7 +23,8 @@ function onDOMContentLoaded() {
   new Vue({
     el: '#app',
     components: {
-      JkMediaGallery: MediaGalleryComponent
+      JkMediaGallery: MediaGalleryComponent,
+      JkSoundCloudPlayer: SoundCloudPlayerComponent
     }
   });
 }
