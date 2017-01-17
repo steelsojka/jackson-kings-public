@@ -14,7 +14,7 @@ module.exports = function(argv) {
     },
     output: {
       path: __dirname + '/dist',
-      filename: '[name].js'
+      filename: '[name].[hash].js'
     },
     module: {
       loaders: [{
@@ -25,10 +25,10 @@ module.exports = function(argv) {
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
       }, {
         test: /assets\/.*\.(jpg|svg)/,
-        loader: 'file?name=assets/[name].[ext]'
+        loader: 'file?name=assets/[name].[hash].[ext]'
       }, {
         test: /fonts\/.*\.(otf|eot|ttf|svg|woff|woff2)/,
-        loader: 'file?name=fonts/[name].[ext]'
+        loader: 'file?name=fonts/[name].[hash].[ext]'
       }, {
         test: /CNAME/,
         loader: 'file?name=[name]'
@@ -40,7 +40,7 @@ module.exports = function(argv) {
       }
     },
     plugins: [
-      new ExtractTextPlugin('app.css'),
+      new ExtractTextPlugin('app.[hash].css'),
       new HTMLWebpackPlugin({
         template: './src/index.ejs'
       }),
