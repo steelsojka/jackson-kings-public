@@ -8,6 +8,7 @@
   padding: 5px;
   background-color: rgba(0, 0, 0, 0.75);
   margin-bottom: 5px;
+  position: relative;
 }
 
 .jk-media-gallery__item img {

@@ -4,11 +4,14 @@
   </div>
   <img v-if="type === 'image' && (pending || resolved)" :src="src" @load="onLoaded"/>
   <div class="relative" v-if="type === 'video' && resolved">
-    <img 
-      class="jk-lazy-image__poster" 
-      v-if="!confirmed" :src="poster" 
-      title="Click for video." 
-      @click.prevent="onClick" />
+    <div v-if="!confirmed">
+      <img class="jk-lazy-image__poster" :src="poster" />
+      <div class="jk-lazy-image__video-play"
+        title="Play video." 
+        @click.prevent="onClick">
+        <span class="fa fa-play"></span>  
+      </div>
+    </div>
     <video 
       class="jk-lazy-image__video"
       v-if="confirmed"

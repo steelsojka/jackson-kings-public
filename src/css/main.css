@@ -9,7 +9,6 @@
 
 body {
   min-height: 100vh;
-  background-image: url(../assets/body-bg-texture.jpg);
   background-attachment: fixed;
   background-position: center;
   color: #F1F1F1;
@@ -93,6 +92,24 @@ a {
 
 .jk-media-player {
   display: flex;
+}
+
+@media(min-width: 860px) {
+  body {
+    background-image: url(../assets/body-bg-texture.jpg);
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    background-image: url(../assets/body-bg-texture_450x780.jpg);
+  }
+}
+
+@media (min-width: 450px) and (max-width: 860px) {
+  body {
+    background-image: url(../assets/body-bg-texture_860x1080.jpg);
+  }
 }
 
 /* Styles specific for phones.

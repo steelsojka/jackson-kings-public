@@ -19,13 +19,16 @@ module.exports = function(argv) {
     module: {
       loaders: [{
         test: /\.html$/,
-        loader: 'html'
+        loader: 'html?minimize=' + Boolean(argv.poduction)
       }, {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
       }, {
         test: /assets\/.*\.(jpg|svg)/,
-        loader: 'file?name=assets/[name].[hash].[ext]'
+        loaders: [
+          'file?name=assets/[name].[hash].[ext]',
+          'image-webpack'
+        ]
       }, {
         test: /fonts\/.*\.(otf|eot|ttf|svg|woff|woff2)/,
         loader: 'file?name=fonts/[name].[hash].[ext]'
@@ -42,12 +45,23 @@ module.exports = function(argv) {
     plugins: [
       new ExtractTextPlugin('app.[hash].css'),
       new HTMLWebpackPlugin({
-        template: './src/index.ejs'
+        template: './src/index.ejs',
+        minify: !argv.production ? false : {
+          collapseWhitespace: true
+        }
       }),
       new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor'
+      }),
+      new webpack.BannerPlugin('Copyright 2016-2017 Jackson Kings. All rights reserved.', {
+        entryOnly: true
       })
-    ]
+    ],
+    imageWebpackLoader: {
+      mozjpeg: {
+        quality: 75
+      }
+    }
   };
 
   if (argv.production) {

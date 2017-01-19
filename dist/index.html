@@ -1,97 +1,20 @@
-<!DOCTYPE html>
-<!--
+<!DOCTYPE html><!--
      ██╗ █████╗  ██████╗██╗  ██╗███████╗ ██████╗ ███╗   ██╗    ██╗  ██╗██╗███╗   ██╗ ██████╗ ███████╗
      ██║██╔══██╗██╔════╝██║ ██╔╝██╔════╝██╔═══██╗████╗  ██║    ██║ ██╔╝██║████╗  ██║██╔════╝ ██╔════╝
      ██║███████║██║     █████╔╝ ███████╗██║   ██║██╔██╗ ██║    █████╔╝ ██║██╔██╗ ██║██║  ███╗███████╗
 ██   ██║██╔══██║██║     ██╔═██╗ ╚════██║██║   ██║██║╚██╗██║    ██╔═██╗ ██║██║╚██╗██║██║   ██║╚════██║
 ╚█████╔╝██║  ██║╚██████╗██║  ██╗███████║╚██████╔╝██║ ╚████║    ██║  ██╗██║██║ ╚████║╚██████╔╝███████║
  ╚════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═══╝    ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝
--->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <!-- Metadata for mobile devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Jackson Kings Official</title>
-  <link href="app.6fcc05121f5017deee42.css" rel="stylesheet"></head>
-  <body>
-    <header>
-      <div class="container">
-        <div class="row">
-          <div class="header-logo">
-            <img src="assets/logo.d30984b0c1102cda262153b62ba63ed0.svg" />
-          </div>
-        </div>
-        <div class="row">
-          <nav>
-            <div class="header-social-media-links">
-              <div class="col-sm-3">
-                <a href="https://twitter.com/thejacksonkings" target="_blank">Twitter</a>
-              </div>
-              <div class="col-sm-3">
-                <a href="https://facebook.com/jacksonkings" target="_blank">Facebook</a>
-              </div>
-              <div class="col-sm-3">
-                <a href="https://www.instagram.com/jacksonkings/" target="_blank">Instagram</a>
-              </div>
-              <div class="col-sm-3">
-                <a href="https://soundcloud.com/jacksonkings" target="_blank">SoundCloud</a>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </header>
-    <section class="main-content">
-      <div id="app" class="container">
-        <div class="content-player">
-          <jk-sound-cloud-player></jk-sound-cloud-player>
-        </div>
-        <div>
-          <jk-media-gallery></jk-media-gallery>
-        </div>
-      </div>
-
-    </section>
-    <!--
+--><html lang="en"><head><meta charset="UTF-8"><!-- Metadata for mobile devices --><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Jackson Kings Official</title><link href="app.2965fbdad06ba64e905e.css" rel="stylesheet"></head><body><header><div class="container"><div class="row"><div class="header-logo"><img src="assets/logo.5957ca13ceee9c8f5914a09e19840035.svg"></div></div><div class="row"><nav><div class="header-social-media-links"><div class="col-sm-3"><a href="https://twitter.com/thejacksonkings" target="_blank">Twitter</a></div><div class="col-sm-3"><a href="https://facebook.com/jacksonkings" target="_blank">Facebook</a></div><div class="col-sm-3"><a href="https://www.instagram.com/jacksonkings/" target="_blank">Instagram</a></div><div class="col-sm-3"><a href="https://soundcloud.com/jacksonkings" target="_blank">SoundCloud</a></div></div></nav></div></div></header><section class="main-content"><div id="app" class="container"><div class="content-player"><jk-sound-cloud-player></jk-sound-cloud-player></div><div><jk-media-gallery></jk-media-gallery></div></div></section><!--
     The footer has some fancy grid layout. When not on a mobile device the footer
     is divded into 2 side by side columns. When smaller the columns stack to go vertical.
-    -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <!-- 
+    --><footer><div class="container"><div class="row"><!-- 
           Social media icons and links
           ============================
 
           The target attribute specifies to open in a new window when clicked.
           The icons are part ofa custom font and are displayed by that 'fa' and 'fa-icon' classes.
-          -->
-          <div class="social-media-icons col-md-8 col-sm-6 col-md-push-4 col-sm-push-6">
-            <a href="https://twitter.com/thejacksonkings" target="_blank">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="https://facebook.com/jacksonkings" target="_blank">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="https://www.instagram.com/jacksonkings/" target="_blank">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-            <a href="https://soundcloud.com/jacksonkings" target="_blank">
-              <i class="fa fa-soundcloud" aria-hidden="true"></i>
-            </a>
-          </div>
-
-          <!-- Copyright notice -->
-          <div class="footer-copyright col-md-4 col-sm-6 col-md-pull-8 col-sm-pull-6">
-            &copy <span id="footer-copyright-year" v-once>2016-{{ copyrightYear }}</span> Jackson Kings. All rights reserved.
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- Load this at the bottom of the body so it's non blocking -->
-    <script type="text/javascript">
-      /****** Google Analytics ***********/
+          --><div class="social-media-icons col-md-8 col-sm-6 col-md-push-4 col-sm-push-6"><a href="https://twitter.com/thejacksonkings" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> </a><a href="https://facebook.com/jacksonkings" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> </a><a href="https://www.instagram.com/jacksonkings/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> </a><a href="https://soundcloud.com/jacksonkings" target="_blank"><i class="fa fa-soundcloud" aria-hidden="true"></i></a></div><!-- Copyright notice --><div class="footer-copyright col-md-4 col-sm-6 col-md-pull-8 col-sm-pull-6">&copy <span id="footer-copyright-year" v-once>2016-{{ copyrightYear }}</span> Jackson Kings. All rights reserved.</div></div></div></footer><!-- Load this at the bottom of the body so it's non blocking --><script type="text/javascript">/****** Google Analytics ***********/
       // This is copied straight from google.
       // DO NOT MODIFY.
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -100,7 +23,4 @@
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-76867928-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-  <script type="text/javascript" src="vendor.6fcc05121f5017deee42.js"></script><script type="text/javascript" src="app.6fcc05121f5017deee42.js"></script></body>
-</html>
+      ga('send', 'pageview');</script><script type="text/javascript" src="vendor.2965fbdad06ba64e905e.js"></script><script type="text/javascript" src="app.2965fbdad06ba64e905e.js"></script></body></html>

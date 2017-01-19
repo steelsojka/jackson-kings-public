@@ -80,10 +80,12 @@ module.exports = {
         }
         
         window.removeEventListener('scroll', handler, false);
+        window.removeEventListener('resize', handler, false);
       }
     }.bind(this), 100);
     
     window.addEventListener('scroll', handler, false);
+    window.addEventListener('resize', handler, false);
     handler();
   }
 };
