@@ -7,14 +7,26 @@ require('./MediaGallery.css');
 
 module.exports = {
   template: template,
+  props: {
+    chunkSize: {
+      default: 6,
+      type: Number
+    }
+  },
   components: {
     JkLazyImage: LazyImageComponent  
   },
   data: function() {
     return {
+      activeItems: [],
       mediaItems: [],
       requestStatus: RequestStatus.PENDING
     };
+  },
+  computed: {
+    hasMore: function() {
+      return Boolean(this.mediaItems.length);
+    }
   },
   methods: {
     getMediaURL: function(item) {
@@ -24,7 +36,14 @@ module.exports = {
         default:
           return item.images.low_resolution.url;
       }
-    }  
+    },
+    loadMore: function() {
+      var limit = Math.min(this.chunkSize, this.mediaItems.length);
+
+      for (var i = 0; i < limit; i++) {
+        this.activeItems.push(this.mediaItems.shift());
+      }
+    }
   },
   mounted: function() {
     var self = this;
@@ -33,6 +52,7 @@ module.exports = {
       .then(function(items) { 
         self.mediaItems = items; 
         self.requestStatus = RequestStatus.SUCCESS;
+        self.loadMore();
       })
       .catch(function(meta) {
         self.requestStatus = RequestStatus.FAILED;

@@ -94,6 +94,13 @@ a {
   display: flex;
 }
 
+.jk-app__title {
+  font-family: 'Code Bold';
+  font-size: 24px;
+  padding: 10px 0;
+  margin: 10px 0;
+}
+
 @media(min-width: 860px) {
   body {
     background-image: url(../assets/body-bg-texture.jpg);
