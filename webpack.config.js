@@ -39,7 +39,7 @@ module.exports = function(argv) {
     },
     resolve: {
       alias: {
-        'vue': 'vue/dist/vue'
+        'vue': argv.production ? 'vue/dist/vue.min' : 'vue/dist/vue'
       }
     },
     plugins: [
@@ -69,6 +69,11 @@ module.exports = function(argv) {
       new webpack.optimize.UglifyJsPlugin({
         compress: {
           warnings: false
+        }
+      }),
+      new webpack.DefinePlugin({
+        'process.env': {
+          NODE_ENV: 'production'
         }
       })
     )
