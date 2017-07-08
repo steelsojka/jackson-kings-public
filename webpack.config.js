@@ -35,6 +35,9 @@ module.exports = function(argv) {
       }, {
         test: /CNAME/,
         loader: 'file?name=[name]'
+      }, {
+        test: /favicon\/.*\.(png|svg|json|xml|ico)$/,
+        loader: 'file?name=[name].[ext]'
       }]
     },
     resolve: {
