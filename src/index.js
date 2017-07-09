@@ -1,5 +1,6 @@
 var MediaGalleryComponent = require('./components').MediaGalleryComponent;
 var SoundCloudPlayerComponent = require('./components').SoundCloudPlayerComponent;
+var EventScheduleComponent = require('./components').EventScheduleComponent;
 var Vue = require('vue');
 
 require('./assets');
@@ -25,7 +26,8 @@ function onDOMContentLoaded() {
     el: '#app',
     components: {
       JkMediaGallery: MediaGalleryComponent,
-      JkSoundCloudPlayer: SoundCloudPlayerComponent
+      JkSoundCloudPlayer: SoundCloudPlayerComponent,
+      JkEventSchedule: EventScheduleComponent
     }
   });
 }

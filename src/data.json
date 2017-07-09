@@ -1,0 +1,20 @@
+{
+  "events": [{
+    "headline": "An All Acoustic Performance",
+    "date": "2017-08-05T08:00:00",
+    "ages": "All Ages",
+    "doorTime": "7pm",
+    "startTime": "8pm",
+    "cover": 8,
+    "location": {
+      "name": "The Waiting Room Lounge"
+    },
+    "description": "",
+    "artists": [
+      "Jackson Kings",
+      "Arson City",
+      "Save the Hero",
+      "Luke Johnson"
+    ]
+  }]
+}

@@ -1,0 +1,1 @@
+module.exports.EventScheduleComponent = require('./EventSchedule.component');

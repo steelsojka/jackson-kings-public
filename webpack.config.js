@@ -38,6 +38,9 @@ module.exports = function(argv) {
       }, {
         test: /favicon\/.*\.(png|svg|json|xml|ico)$/,
         loader: 'file?name=[name].[ext]'
+      }, {
+        test: /\.json$/,
+        loader: 'json-loader'
       }]
     },
     resolve: {
