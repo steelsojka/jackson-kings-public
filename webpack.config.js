@@ -46,7 +46,11 @@ module.exports = function(argv) {
         loader: 'file?name=[name].[ext]'
       }, {
         test: /\.json$/,
+        exclude: /manifest.json$/,
         loader: 'json-loader'
+      }, {
+        test: /mainfest.json$/,
+        loader: 'file?name=[name]'
       }]
     },
     resolve: {
