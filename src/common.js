@@ -1,4 +1,4 @@
-module.exports.RequestStatus = {
+export const RequestStatus = {
   PENDING: 'PENDING',
   SUCCESS: 'SUCCESS',
   FAILED: 'FAILED'

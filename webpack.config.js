@@ -18,6 +18,12 @@ module.exports = function(argv) {
     },
     module: {
       loaders: [{
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      }, {
+        test: /\.js$/,
+        loader: 'babel-loader'
+      }, {
         test: /\.html$/,
         loader: 'html?minimize=' + Boolean(argv.poduction)
       }, {
@@ -51,6 +57,7 @@ module.exports = function(argv) {
     plugins: [
       new ExtractTextPlugin('app.[hash].css'),
       new HTMLWebpackPlugin({
+        copyrightYear: (new Date()).getFullYear(),
         template: './src/index.ejs',
         minify: !argv.production ? false : {
           collapseWhitespace: true

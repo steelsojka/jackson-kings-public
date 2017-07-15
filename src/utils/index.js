@@ -1,3 +1,2 @@
-module.exports.InstagramService = require('./InstagramService');
-module.exports.loadJSONP = require('./loadJSONP');
-module.exports.exportAll = require('./exportAll');
+export * from './InstagramService';
+export * from './loadJSONP';

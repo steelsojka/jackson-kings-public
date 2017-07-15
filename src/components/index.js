@@ -1,6 +1,13 @@
-var exportAll = require('../utils/exportAll');
+import EventScheduleComponent from './EventSchedule.vue';
+import SoundCloudPlayerComponent from './SoundCloudPlayer.vue';
+import MediaGalleryComponent from './MediaGallery.vue';
+import LazyImageComponent from './LazyImage.vue';
+import AppComponent from './App.vue';
 
-exportAll(module.exports, require('./mediaGallery'));
-exportAll(module.exports, require('./lazyImage'));
-exportAll(module.exports, require('./soundCloud'));
-exportAll(module.exports, require('./eventSchedule'));
+export {
+  EventScheduleComponent,
+  SoundCloudPlayerComponent,
+  MediaGalleryComponent,
+  LazyImageComponent,
+  AppComponent
+};

@@ -1,7 +1,6 @@
-var MediaGalleryComponent = require('./components').MediaGalleryComponent;
-var SoundCloudPlayerComponent = require('./components').SoundCloudPlayerComponent;
-var EventScheduleComponent = require('./components').EventScheduleComponent;
-var Vue = require('vue');
+import Vue from 'vue';
+
+import AppComponent from './components';
 
 require('./assets');
 require('./css');
@@ -14,20 +13,12 @@ document.addEventListener('DOMContentLoaded', onDOMContentLoaded, false);
 // Main function executed on DOM loaded.
 function onDOMContentLoaded() {
   new Vue({
-    el: 'footer',
-    data: function() {
-      return {
-        copyrightYear: (new Date()).getFullYear()
-      };
-    }
-  });
-
-  new Vue({
-    el: '#app',
     components: {
-      JkMediaGallery: MediaGalleryComponent,
-      JkSoundCloudPlayer: SoundCloudPlayerComponent,
-      JkEventSchedule: EventScheduleComponent
+      JkApp: AppComponent
+    },
+    el: '#app',
+    render(h) {
+      return h('jk-app');
     }
   });
 }

@@ -1,11 +1,11 @@
-var head = document.head || document.getElementsByTagName('head')[0];
-var scriptNode = document.createElement('script');
-var uuid = 0;
+const head = document.head || document.getElementsByTagName('head')[0];
+const scriptNode = document.createElement('script');
+let uuid = 0;
 
 scriptNode.type = 'text/javascript';
 
-module.exports = function loadJSONP(url) {
-  return new Promise(function(resolve) {
+export function loadJSONP(url) {
+  return new Promise(resolve => {
     var name = '__jsonp' + uuid++;
 
     url += '&callback=' + name;

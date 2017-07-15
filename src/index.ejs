@@ -49,21 +49,7 @@
       </div>
     </header>
     <section class="main-content">
-      <div id="app" class="container">
-        <div class="jk-app__title">Music</div>
-        <div class="content-player">
-          <jk-sound-cloud-player></jk-sound-cloud-player>
-        </div>
-        <div class="jk-app__title">Events</div>
-        <div>
-          <jk-event-schedule></jk-event-schedule>
-        </div>
-        <div class="jk-app__title">Media</div>
-        <div>
-          <jk-media-gallery></jk-media-gallery>
-        </div>
-      </div>
-
+      <div id="app"></div>
     </section>
     <!--
     The footer has some fancy grid layout. When not on a mobile device the footer
@@ -96,7 +82,7 @@
 
           <!-- Copyright notice -->
           <div class="footer-copyright col-md-4 col-sm-6 col-md-pull-8 col-sm-pull-6">
-            &copy <span id="footer-copyright-year" v-once>2016-{{ copyrightYear }}</span> Jackson Kings. All rights reserved.
+            &copy <span id="footer-copyright-year">2016-<%= htmlWebpackPlugin.options.copyrightYear %></span> Jackson Kings. All rights reserved.
           </div>
         </div>
       </div>
