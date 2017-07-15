@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-import AppComponent from './components';
+import { AppComponent } from './components';
 
 require('./assets');
 require('./css');

@@ -51,7 +51,7 @@ module.exports = function(argv) {
     },
     resolve: {
       alias: {
-        'vue': argv.production ? 'vue/dist/vue.min' : 'vue/dist/vue'
+        'vue': argv.production ? 'vue/dist/vue.runtime.min' : 'vue/dist/vue.runtime.common'
       }
     },
     plugins: [
