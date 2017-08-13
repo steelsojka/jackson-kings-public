@@ -2,6 +2,9 @@
   "name": "jackson-kings-public",
   "version": "1.0.0",
   "description": "Jackson Kings Public Site",
+  "engines": {
+    "node": "8.x.x"
+  },
   "scripts": {
     "start": "node scripts/serve.js",
     "prebuild": "npm run clean",
