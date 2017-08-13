@@ -4,7 +4,8 @@ import dateformat from 'dateformat';
 const { events } = require('../data.json');
 
 const ONE_DAY_MS = 24 * 60 * 60 * 1000;
-const EVENT_LIMIT = Date.now() - ONE_DAY_MS;
+const DEFAULT_DAY_LIMIT = 30;
+const NOW = Date.now();
 
 export default {
   data() {
@@ -15,7 +16,7 @@ export default {
 
           return event;
         })
-        .filter(event => event.date.getTime() >= EVENT_LIMIT)
+        .filter(event => event.date.getTime() >= (NOW - (ONE_DAY_MS * (event.expirationLife || DEFAULT_DAY_LIMIT))))
         .sort((a, b) => a.date.getTime() > b.date.getTime())
     };
   },
@@ -29,17 +30,22 @@ export default {
 
 <template>
 <div class="jk-event-schedule">
-	<div class="jk-event-schedule__event" v-bind:key="event.headline" v-for="event of events">
-		<div class="jk-event-schedule__date">{{ formatEventDate(event.date) }}</div>
-		<div class="jk-event-schedule__location">{{ event.location.name }}</div>
-		<div class="jk-event-schedule__headline">{{ event.headline }}</div>
-		<div>
-			<span>With: {{ event.artists.join(', ') }}</span>
-		</div>
-		<div v-if="event.description" class="jk-event-schedule__description">{{ event.description }}</div>
-		<div>Doors: {{ event.doorTime }}, Show: {{ event.startTime }}, {{ event.ages }}</div>
-		<div v-if="event.cover">${{ event.cover.toFixed(2) }} Cover</div>
-	</div>
+  <div v-if="events.length">  
+    <div class="jk-event-schedule__event" v-bind:key="event.headline" v-for="event of events">
+      <div class="jk-event-schedule__date">{{ formatEventDate(event.date) }}</div>
+      <div class="jk-event-schedule__location">{{ event.location.name }}</div>
+      <div class="jk-event-schedule__headline">{{ event.headline }}</div>
+      <div>
+        <span>With: {{ event.artists.join(', ') }}</span>
+      </div>
+      <div v-if="event.description" class="jk-event-schedule__description">{{ event.description }}</div>
+      <div>Doors: {{ event.doorTime }}, Show: {{ event.startTime }}, {{ event.ages }}</div>
+      <div v-if="event.cover">${{ event.cover.toFixed(2) }} Cover</div>
+    </div>
+  </div>
+  <div v-if="!events.length">
+    There are no events currently scheduled.
+  </div>
 </div>
 </template>
 

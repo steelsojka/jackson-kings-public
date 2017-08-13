@@ -6,6 +6,7 @@
     "doorTime": "7pm",
     "startTime": "8pm",
     "cover": 8,
+    "expirationLife": 30,
     "location": {
       "name": "The Waiting Room Lounge"
     },
