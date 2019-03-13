@@ -17,5 +17,21 @@
       "Save the Hero",
       "Luke Johnson"
     ]
+  },{
+    "headline": "Suspicious Fifth Reunion Show",
+    "date": "2019-04-06T08:00:00",
+    "ages": "",
+    "doorTime": "7pm",
+    "startTime": "8pm",
+    "cover": null,
+    "expirationLife": 30,
+    "location": {
+      "name": "The Slowdown"
+    },
+    "description": "",
+    "artists": [
+      "Suspicious Fifth",
+      "Jackson Kings"
+    ]
   }]
 }

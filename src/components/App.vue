@@ -8,7 +8,7 @@ export default {
     JkMediaGallery: MediaGalleryComponent,
     JkSoundCloudPlayer: SoundCloudPlayerComponent,
     JkEventSchedule: EventScheduleComponent
-  }  
+  }
 }
 </script>
 
@@ -16,6 +16,9 @@ export default {
 <template>
 <div class="container">
   <div id="music" class="jk-app__title">Music</div>
+  <div>
+    <iframe width="100%" height="480" src="https://www.youtube.com/embed/bSpq5XtyS5Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
   <div class="content-player">
     <jk-sound-cloud-player></jk-sound-cloud-player>
   </div>
