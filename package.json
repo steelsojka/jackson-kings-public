@@ -12,7 +12,8 @@
     "clean": "del ./dist",
     "build": "node scripts/build.js --production",
     "build:dev": "node scripts/build.js",
-    "deploy": "git subtree push --prefix dist/ origin gh-pages"
+    "deploy": "git subtree push --prefix dist/ origin gh-pages",
+    "deploy:fix": "git push origin `git subtree split --prefix dist/ master`:gh-pages --force"
   },
   "repository": {
     "type": "git",
