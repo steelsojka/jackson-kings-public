@@ -10,8 +10,8 @@
     "prebuild": "npm run clean",
     "prebuild:dev": "npm run clean",
     "clean": "del ./dist",
-    "build": "node scripts/build.js --production",
-    "build:dev": "node scripts/build.js",
+    "build": "node scripts/build.js --production && node scripts/permalinks.js",
+    "build:dev": "node scripts/build.js && node scripts/permalinks.js",
     "deploy": "git subtree push --prefix dist/ origin gh-pages",
     "deploy:fix": "git push origin `git subtree split --prefix dist/ master`:gh-pages --force"
   },
