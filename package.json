@@ -7,13 +7,14 @@
   },
   "scripts": {
     "start": "node scripts/serve.js",
-    "prebuild": "npm run clean",
-    "prebuild:dev": "npm run clean",
+    "prebuild": "npm run clean && npm run generate:sites",
+    "prebuild:dev": "npm run clean && npm run generate:sites",
     "clean": "del ./dist",
-    "build": "node scripts/build.js --production",
-    "build:dev": "node scripts/build.js",
+    "build": "node scripts/build.js --production && node scripts/permalinks.js",
+    "build:dev": "node scripts/build.js && node scripts/permalinks.js",
     "deploy": "git subtree push --prefix dist/ origin gh-pages",
-    "deploy:fix": "git push origin `git subtree split --prefix dist/ master`:gh-pages --force"
+    "deploy:fix": "git push origin `git subtree split --prefix dist/ master`:gh-pages --force",
+    "generate:sites": "node scripts/generate-link-pages.js"
   },
   "repository": {
     "type": "git",
@@ -40,11 +41,11 @@
     "vue-template-compiler": "^2.4.1",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2",
-    "yargs": "^6.6.0"
+    "yargs": "^6.6.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0"
   },
   "dependencies": {
-    "babel-loader": "^7.1.1",
-    "babel-preset-env": "^1.6.0",
     "bootstrap": "^3.3.7",
     "dateformat": "^2.0.0",
     "font-awesome": "^4.7.0",

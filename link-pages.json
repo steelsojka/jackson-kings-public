@@ -1,0 +1,30 @@
+[
+  {
+    "filename": "saveme",
+    "permalink": "/saveme",
+    "songTitle": "Save Me",
+    "albumImageUrl": "./assets/save_me_album_cover.jpg",
+    "links": [
+      {
+        "url": "https://open.spotify.com/album/1FRkcxZ0MkDbykFs9swFZj",
+        "imagePath": "./assets/spotify-logo.png"
+      },
+      {
+        "url": "https://itunes.apple.com/us/album/save-me-single/1463330719?uo=4&app=music&at=1001lry3&ct=dashboard",
+        "imagePath": "./assets/apple-music-logo.png"
+      },
+      {
+        "url": "https://itunes.apple.com/us/album/save-me-single/1463330719?uo=4&app=music&at=1001lry3&ct=dashboard&app=itunes&at=1001lry3&ct=dashboard",
+        "imagePath": "./assets/itunes-logo.png"
+      },
+      {
+        "url": "https://play.google.com/store/music/album?id=Bafruqbu5vr4in7sj433xuvs3jm&tid=song-Ts6rfa5dpaxvhqhcez5mcp5bfoa",
+        "imagePath": "./assets/google-play-logo.png"
+      },
+      {
+        "url": "https://www.amazon.com/Save-Me-Jackson-Kings/dp/B07RQHJMVV/ref=sr_1_1?keywords=jackson+kings+save+me&qid=1558574984&s=dmusic&sr=1-1-catcorr",
+        "imagePath": "./assets/amazon-music-logo.svg"
+      }
+    ]
+  }
+]
