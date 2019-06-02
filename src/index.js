@@ -12,19 +12,21 @@ if (!window.Promise) {
   window.Promise = Promise;
 }
 
-const root = new Vue({
-  components: {
-    JkApp: AppComponent
-  },
-  render(h) {
-    return h('jk-app');
+if (!window.__IS_SONG_PAGE__) {
+  const root = new Vue({
+    components: {
+      JkApp: AppComponent
+    },
+    render(h) {
+      return h('jk-app');
+    }
+  });
+
+  // Run when the document is ready for modification.
+  document.addEventListener('DOMContentLoaded', onDOMContentLoaded, false);
+
+  // Main function executed on DOM loaded.
+  function onDOMContentLoaded() {
+    root.$mount('#app');
   }
-});
-
-// Run when the document is ready for modification.
-document.addEventListener('DOMContentLoaded', onDOMContentLoaded, false);
-
-// Main function executed on DOM loaded.
-function onDOMContentLoaded() {
-  root.$mount('#app');
 }
