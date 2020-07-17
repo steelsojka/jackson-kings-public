@@ -49,7 +49,7 @@
     "bootstrap": "^3.3.7",
     "dateformat": "^2.0.0",
     "font-awesome": "^4.7.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.19",
     "promise-polyfill": "^6.0.2",
     "vue": "^2.1.8"
   }
